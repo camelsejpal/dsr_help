@@ -25,15 +25,16 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           
-      - name: Install VitePress Globally
-        # Globální instalace vyřeší všechny problémy s právy
-        run: npm install -g vitepress
+      - name: Force Clean and Install
+        # TOTO JE TEN TRIK: Server smaže vše špatné a udělá čistou linuxovou instalaci
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install vitepress
         
       - name: Build with VitePress
-        # Spuštění globálního příkazu
-        run: vitepress build
+        run: npx vitepress build
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
