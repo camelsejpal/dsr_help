@@ -26,15 +26,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # Záměrně smazáno cachování
           
-      - name: Install VitePress on the fly
-        # Nainstaluje VitePress přímo, nepotřebuje package.json
-        run: npm install vitepress
+      - name: Install VitePress Globally
+        # Globální instalace vyřeší všechny problémy s právy
+        run: npm install -g vitepress
         
       - name: Build with VitePress
-        # Spustí sestavení přímo přes npx
-        run: npx vitepress build
+        # Spuštění globálního příkazu
+        run: vitepress build
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
