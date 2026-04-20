@@ -2,7 +2,7 @@ name: Deploy VitePress site to Pages
 
 on:
   push:
-    branches: [main] # Spustí se při každém nahrání do hlavní větve
+    branches: [main] 
 
 permissions:
   contents: read
@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          # Zde byl řádek cache: npm, který způsoboval chybu. Je pryč.
       - name: Install dependencies
         run: npm install
       - name: Build with VitePress
@@ -33,7 +33,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist # Cesta, kam VitePress generuje hotový web
+          path: .vitepress/dist 
 
   deploy:
     environment:
