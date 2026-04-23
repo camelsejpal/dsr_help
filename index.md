@@ -22,4 +22,16 @@ features:
     details: Nevíte si rady? Použijte vyhledávání v horním panelu a najděte odpověď okamžitě.
   - title: 🔄 Vždy aktuální
     details: Dokumentace je pravidelně aktualizována, aby odpovídala nejnovější verzi aplikace.
+  - title: Evidence dat a řízení mimo ISSŘ
+    details: [Odkaz na Obecnou příručku](/prirucka/01-Obecna-prirucka)
+  - title: Obecná příručka
+    details: [Odkaz na Obecnou příručku](/prirucka/01-Obecna-prirucka)
+  - title: Ověření passportu
+    details: [Odkaz na Obecnou příručku](/prirucka/01-Obecna-prirucka)
+  - title: Příručka lokálního admina
+    details: [Odkaz na Obecnou příručku](/prirucka/01-Obecna-prirucka)
+  - title: Proces odvolání
+    details: [Odkaz na Obecnou příručku](/prirucka/01-Obecna-prirucka)
+  - title: Verifikátor podpisu
+    details: [Odkaz na Obecnou příručku](/prirucka/01-Obecna-prirucka)
 ---
